@@ -1,0 +1,63 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/bg-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.bg-gray-700:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(31, 101, 65, 0.797);
+}
+
+/* Button animations */
+button:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(31, 101, 65, 0.797);
+}
+
+/* Navigation hover effects */
+nav a:hover {
+    transition: color 0.3s ease;
+}
+
+/* Form focus effects */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(31, 101, 65, 0.797);
+}
+
+/* Video and audio styling */
+video, audio {
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(31, 101, 65, 0.797);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Fade in animation for sections */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

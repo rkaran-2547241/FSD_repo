@@ -1,0 +1,17 @@
+.header{
+    text-align: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.footer{
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background: #ccc; 
+    text-align: center;
+}

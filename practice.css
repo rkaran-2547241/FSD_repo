@@ -1,0 +1,14 @@
+.header{
+    background: rgba(33, 30, 30, 0.789);
+    text-align: center;    
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;  
+    padding:  10px;
+}
+.nav_bar ul{
+    display: flex;
+    list-style: none;    
+    justify-content: center;
+    gap: 20px;
+    text-size-adjust: 15px;
+}

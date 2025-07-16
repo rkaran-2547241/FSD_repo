@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTSIDE - Travel Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white">
+    <nav class="bg-black fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+           <div class="flex justify-between items-center h-10">
+           <div class="flex items-center">
+               <span class="text-xl font-bold text-emerald-700">OUTSIDE</span>
+           </div>
+           <div class="md:flex flex gap-4">
+            <a href="#home" class="text-white hover:text-emerald-700 px-3 py-2 flex items-center">
+                <i class="fas fa-home mr-2"></i>Home
+             </a>
+             <a href="#places" class="text-white hover:text-emerald-700 px-3 py-2 flex items-center">
+             <i class="fas fa-map-marker-alt mr-2"></i>Places
+         </a>
+             <a href="#gallery" class="text-white hover:text-emerald-700 px-3 py-2 flex items-center">
+                    <i class="fas fa-images mr-2"></i>Gallery
+                </a>
+                <a href="#contact" class="text-white hover:text-emerald-700 px-3 py-2 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section relative h-screen flex items-center justify-center">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+        Discover Amazing Places
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+            Explore breathtaking destinations around the world and create unforgettable memories
+        </p>
+        <button class="bg-emerald-700 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg text-lg">
+            <i class="fas fa-compass mr-2"></i>Explore Now
+            </button>
+        </div>
+    </section>
+
+
+    <section class="bg-stone-900 p-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-700">Relaxing Background Music</h3>
+        <audio controls class="mx-auto">
+            <source src="audio\The Weeknd Professional Instrumental Original.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Travel Experience</h2>
+            <div class="max-w-4xl mx-auto">
+                <video controls class="w-full rounded-lg shadow-xl" poster="images/video-poster.jpg">
+    <source src="/video\Maldives_Cinematic_Travel_video.mp4" type="video/mp4">
+    <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English" default>
+    Your browser does not support the video tag.
+    </video>
+                <p class="text-center text-gray-400 mt-4">
+                    <small>Experience breathtaking destinations and adventures around the world</small>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="places" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Popular Destinations</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                <img src="images/toronto.jpg" alt="toronto" class="w-full h-48 object-cover">
+           <div class="p-8">
+               <h3 class="text-xl font-bold mb-2 text-emerald-700">Toronto, Cannada</h3>
+                   <p class="text-gray-300">Toronto: A World Within a City.</p>
+               </div>
+           </div>
+       <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+           <img src="images\Tokyo-for-Hero.jpg" alt="Tokyo" class="w-full h-48 object-cover">
+           <div class="p-6">
+               <h3 class="text-xl font-bold mb-2 text-emerald-700">Tokyo, Japan</h3>
+               <p class="text-gray-300">Modern meets traditional</p>
+               </div>
+           </div>
+                <div class="bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                    <img src="images\Lights_of_Rockefeller_Center_during_sunset.jpg" alt="New York" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                 <h3 class="text-xl font-bold mb-2 text-emerald-700">New York, USA</h3>
+                 <p class="text-gray-300">The city that never sleeps</p>
+             </div>
+         </div>
+     </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Country Info</h2>
+        <div id="api-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="text-center">
+                <i class="fas fa-spinner fa-spin text-pink-400 text-2xl"></i>
+                    <p class="text-gray-300 mt-2">Loading content...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Photo Gallery</h2>
+            <div class="flex flex gap-4 items-center justify-between" >
+                <div class="bg-gray-700 rounded-lg shadow-lg">
+               <img src="/images/t1.jpeg" alt="Gallery 1" class="w-full h-48 object-cover">
+           </div>
+           <div class="bg-gray-700 rounded-lg overflow-hidden">
+               <img src="/images/t2.jpg" alt="Gallery 2" class="w-full h-48 object-cover">
+           </div>
+           <div class="bg-gray-700 rounded-lg overflow-hidden">
+               <img src="/images\t3.jpeg" alt="Gallery 3" class="w-full h-48 object-cover">
+           </div>
+           <div class="bg-gray-700 rounded-lg overflow-hidden">
+               <img src="/images/t4.jpeg" alt="Gallery 4" class="w-full h-48 object-cover">
+           </div>
+       </div>
+   </div>
+</section>
+    <section id="contact" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Contact Us</h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                <label class="block text-gray-300 mb-2">Name</label>
+                <input type="text" class="w-full px-4 py-2 bg-gray-700 text-white 
+                rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400">                
+          </div>
+          <div>
+              <label class="block text-gray-300 mb-2">Email</label>
+              <input type="email" class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg 
+              focus:outline-none focus:ring-2 focus:ring-emerald-400">                
+          </div>
+
+            <div>
+                        <label class="block text-gray-300 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-2 bg-gray-700 text-white 
+                        rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                    </textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-900
+                     text-white py-2 px-4 rounded-lg font-semibold">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- SVG Icon -->
+            <div class="mb-4">
+                <svg class="w-12 h-12 mx-auto text-emerald-700" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+
+            </div>
+            <p class="text-gray-400">&copy; 2024 ExploreWorld. Name- R.Karan Roll No-2547241 .</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

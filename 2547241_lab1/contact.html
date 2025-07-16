@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Solo Work - Location, details and contact form."/>
+  <meta name="author" content="R.Karan"/>
+  <title>Solo Work - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <header>
+    <nav class="bg-red-950 text-white h-14 flex items-center justify-between px-6">
+      <span class="w-12 h-8 flex items-center">
+        <a href="home.html">
+  <img src="images/solo_logo.webp" alt="solo_logo" class="h-8"/>
+</a>
+</span>
+      <span class="text-xl font-bold">SOLO WORK</span>
+      <div class="space-x-4">
+        <a href="home.html" class="hover:underline">Home</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-1 p-6 space-y-8">
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">We are located at:</h2>
+      <div class="rounded-lg border">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d437.74639145254747!2d77.21859947906545!3d28.630627299105125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd363ae86c37%3A0x32422089d4931b51!2sPalika%20Bazar%20Underground%20Shopping%20Complex!5e0!3m2!1sen!2sin!4v1750831943599!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          class="w-full"
+          style="border: 1px solid black;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <br/>
+    </section>
+
+    <section>
+      <p>Latitude: <span id="latitude" class="font-mono text-blue-700"></span></p>
+      <p>Longitude: <span id="longitude" class="font-mono text-blue-700"></span></p>
+      <div id="error" class="text-red-600 font-semibold"></div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Contact Us</h2>
+      <form onsubmit="saveContactData(); return false;" class="space-y-4 max-w-md">
+        <div>
+          <label for="name" class="block font-medium">name</label>
+          <input type="text" id="name" placeholder="Your name" class="w-full border p-2 rounded" required>
+        </div>
+        <div>
+          <label for="email" class="block font-medium">email</label>
+          <input type="email" id="email" placeholder="Your email" class="w-full border p-2 rounded" required>
+        </div>
+        <button type="submit" class="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800">
+          submit
+        </button>
+        <p id="formStatus" class="text-green-600 font-medium hidden"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-3">
+    <p>R.Karan &nbsp;|&nbsp; 25-06-2025 ©</p>
+  </footer>
+  <script>
+    window.onload = function () {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(getPositions, showError);
+      } else {
+        displayError("Geolocation is not supported by this browser.");
+      }
+
+        function getPositions(position) {
+          document.getElementById("latitude").innerText = position.coords.latitude;
+          document.getElementById("longitude").innerText = position.coords.longitude;
+        }
+
+        function showError(error) {
+        let msg = "";
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            msg = "Permijion denied to by the user";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            msg = "cannot find the Position is currenlty ";
+            break;
+          case error.TIMEOUT:
+            msg = "Geolocation request timed out";
+            break;
+          case error.UNKNOWN_ERROR:
+            msg = "An unknown error occurred";
+            break;
+        }
+        displayError(msg);
+      }
+
+      function displayError(msg) {
+        document.getElementById("error").innerText = msg;
+      }
+    };
+
+    function saveContactData() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      sessionStorage.setItem("contactName", name);
+      sessionStorage.setItem("contactEmail", email);
+
+      const status = document.getElementById("formStatus");
+      status.innerText = "Message saved in session!";
+      status.classList.remove("hidden");
+
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+    }
+
+</script>
+
+</body>
+</html>
