@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class = "bg-gray-800 text-white p-4 justify-center items-center flex">
+        <h1>
+            Feedback Collection System
+        </h1>
+    </div>
+
+<div class = "p-2">
+          <label class="flex items-center space-x-2 checkbox-label p-2 ">
+            <span>Full Name</span>
+          <input type="text" id="fulll_name" name="name" class="accent-emerald-600 outline-none border border-gray-300 ">
+        </label>
+
+        <label class="flex items-center space-x-2 checkbox-label p-2 ">
+            <span>Email</span>
+          <input type="email" id="email_id" name="email_id" class="accent-emerald-600 outline-none border border-gray-300 ">
+        </label>
+
+
+
+        <label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
+
+<label class="block font-semibold mb-1">Preferred Contact method:</label>
+        <div class="space-y-1">
+          <label class="flex items-center space-x-2 checkbox-label">
+          <input type="checkbox" id="contactEmail" name="contactMethod" value="Email" class="accent-emerald-600">
+          <span>Email</span>
+</label>
+
+<label class="flex items-center space-x-2 checkbox-label">
+          <input type="checkbox" id="contactPhone" name="contactMethod" value="Phone" class="accent-emerald-600">
+          <span>Phone</span>
+</label>
+            </div>
+      
+        </div>
+
+
+      <div>
+        <label for="brief" class="block font-semibold mb-1">Upload Project brief:</label>
+      <input type="file" id="brief" name="brief" class="block w-full text-sm text-gray-700">
+    </div>
+
+    <div>
+      <label for="details" class="block font-semibold mb-1">Project Details:</label>
+     <textarea id="details" name="details" rows="5" cols="40" placeholder="Describe your project here..."
+       class="w-full p-3 border border-gray-300 focus:outline-none focus:ring-emerald-500"></textarea>
+    </div>
+
+
+      <div class="text-center">
+     <input type="submit" value="Submit Request"
+        class="bg-emerald-600 text-white p-2 rounded-md hover:bg-emerald-400 cursor-pointer">
+      </div>
+
+    </form>
+  </div>
+
+  <div id="output" class="mt-6 p-4 bg-white shadow rounded-md text-gray-800 hidden"></div>
+
+
+</body> 
+    
+</html>

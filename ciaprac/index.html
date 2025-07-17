@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>E-Shop Explorer Web App</title>
+</head>
+
+<body class="bg-stone-300 text-gray-800">
+
+  <nav class="text-black font-semibold p-4">
+    <div class="flex justify-center items-center">
+      <div class="flex gap-4">
+        <a href="#home" class="hover:text-slate-500 cursor-pointer flex items-center gap-1">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="#products-section" class="hover:text-slate-500 cursor-pointer flex items-center gap-1">
+          <i class="fas fa-box"></i> Products
+        </a>
+        <a href="#contact-section" class="hover:text-slate-500 cursor-pointer flex items-center gap-1">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-black">
+    <marquee class="text-white">
+      Sale 50% off on winter cloths!!! Buy Nowwwww &nbsp;&emsp;&emsp;
+      Sale 50% off on winter cloths!!! Buy Nowwwww &nbsp;&emsp;&emsp;
+      Sale 50% off on winter cloths!!! Buy Nowwwww &nbsp;&emsp;&emsp;
+      Sale 50% off on winter cloths!!! Buy Nowwwww &nbsp;&emsp;&emsp;
+    </marquee>
+  </div>
+
+  <section id="home" class="relative h-64 flex items-center justify-center bg-center"
+   style="background-image: url('/images_videos/shopping-bag-cart_23-2148879372.avif');"> >
+        <div class="bg-black bg-opacity-80 p-8 rounded-lg text-center hover:bg-stone-600 shadow-2xl ">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-2 ">Welcome to E-Shop Explorer</h1>
+            <p class="text-white text-lg">Discover top products and exclusive deals for winters!!!</p>
+        </div>
+    </section>
+
+  <div class="p-4">
+    <h1 class="text-lg mb-2">Search for a Product</h1>
+    <div class="flex gap-2">
+      <input type="text" id="title" placeholder="Type here..." class="text-black px-4 py-1 rounded w-full border mb-4" />
+      <button id="button_srch" class="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600">Search</button>
+    </div>
+    <p id="greetMsg" class="text-green-600 mt-2 hidden"></p>
+  </div>
+
+  <div class="p-4">
+    <h2 class="text-lg mb-2">Sort by Price</h2>
+    <div class="flex flex-col gap-3 w-64">
+      <select id="price_sort" class="px-3 py-1 rounded border">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="products-section" class="p-4">
+    <h2 class="text-lg mb-2">Product Display</h2>
+    <div id="products" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  </div>
+
+  <div class="p-4">
+    <h2 class="text-lg mb-2">Geolocation</h2>
+    <button onclick="findLocation()" class="bg-blue-500 text-white px-4 py-2 rounded">Get My Location</button>
+    <p id="locationDisplay" class="mt-2 text-gray-600"></p>
+  </div>
+
+  <div id="contact-section" class="p-4"> 
+    <h2 class="text-xl mb-3">Contact Us</h2>
+    <form id="form" class="flex flex-col gap-3 w-64">
+      <input type="text" name="username" placeholder="your name" class="border px-3 py-2 rounded" required />
+      <input type="email" name="email" placeholder="your email" class="border px-3 py-2 rounded" required />
+      <input type="text" name="product" placeholder="interested product" class="border px-3 py-2 rounded" required />
+      <button type="submit" class="bg-green-500 text-white p-2 rounded">Submit</button>
+    </form>
+    <p id="formStatus" class="text-green-600 mt-2"></p>
+  </div>
+
+  <section class="container mx-auto px-4 py-8 flex flex-col items-center gap-8 p-4">
+    <div class="w-full flex flex-col items-center">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Store Introduction</h2>
+        <video controls class="mx-auto">
+            <source src="images_videos/Set1_Video.mp4" type="video/mp4">
+            <track src="sample.vtt" kind="subtitles" srclang="en" label="English">
+            browser do not support the video tag.
+        </video>
+    </div>
+
+    <div class="w-full flex flex-col items-center">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Featured Product</h2>
+        <audio controls class="w-full max-w-md ">
+            <source src="images_videos/Set1_Audio.mp3" type="audio/mpeg">
+            browser do not support the audio element.
+        </audio>
+    </div>
+  </section>
+
+  <script src="CIA2.js"></script>
+
+</body>
+
+</html>
